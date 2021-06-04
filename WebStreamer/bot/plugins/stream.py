@@ -73,7 +73,7 @@ async def private_receive_handler(c: Client, m: Message):
         elif m.audio:
             file_name = f"{m.audio.file_name}"
 
-        msg_text = " **⁍ File Name :** `{}`\n**⁍ File Size :** `{}`\n **Download Link :** `{}`"
+        msg_text = " **⁍ File Name :** `{}`\n**⁍ File Size :** `{}`\n\n **Download Link :** `{}`"
         await log_msg.reply_text(text=f"Requested by [{m.from_user.first_name}](tg://user?id={m.from_user.id})\n**User ID:** `{m.from_user.id}`\n**Download Link:** {stream_link}", disable_web_page_preview=True, parse_mode="Markdown", quote=True)
         await m.reply_text(
             text=msg_text.format(file_name, file_size, stream_link),
@@ -103,7 +103,7 @@ async def channel_receive_handler(bot, broadcast):
             message_id=broadcast.message_id,
             reply_markup=InlineKeyboardMarkup(
                 [
-                    [InlineKeyboardButton("Get Direct Download Link", url=f"https://t.me/AH_File2Link_Bot?start=AbirHasan2005_{str(log_msg.message_id)}")]
+                    [InlineKeyboardButton("Download Link", url=f"https://t.me/AH_File2Link_Bot?start=AbirHasan2005_{str(log_msg.message_id)}")]
                 ]
             )
         )
