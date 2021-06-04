@@ -53,7 +53,7 @@ async def start(b, m):
                     disable_web_page_preview=True)
                 return
         await m.reply_text(
-            text='<b> Hai, I Am A File To Link Generator Bot.</b>',
+            text='<b> Hai, I Am A File To Link Bot.</b>',
             reply_markup=InlineKeyboardMarkup(
                         [
                             [
