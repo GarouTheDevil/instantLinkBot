@@ -26,7 +26,7 @@ async def start(b, m):
                 if user.status == "kicked":
                     await b.send_message(
                         chat_id=m.chat.id,
-                        text="<b>You are Banned.</b>",
+                        text="**You are Banned**",
                         parse_mode="markdown",
                         disable_web_page_preview=True
                     )
@@ -34,7 +34,7 @@ async def start(b, m):
             except UserNotParticipant:
                 await b.send_message(
                     chat_id=m.chat.id,
-                    text="<b>Please Join My Updates Channel</b>",
+                    text="**Please Join My Updates Channel**",
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
@@ -78,7 +78,7 @@ async def start(b, m):
             except UserNotParticipant:
                 await b.send_message(
                     chat_id=m.chat.id,
-                    text="** Join My Updates Channel**",
+                    text="**Join My Updates Channel**",
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
